@@ -1,6 +1,7 @@
 build:
   - default
   - uglify
+  - copy
 
 default:
  - browserify
