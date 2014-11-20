@@ -2,6 +2,7 @@
 
 var XD = require('./postmessage.js');
 var EventEmitter = require('events').EventEmitter;
+var util = require('util');
 
 var Tapcite = function() {
     EventEmitter.call(this);
@@ -15,6 +16,6 @@ var Tapcite = function() {
         self.emit(event.data.event, event.data.data);
     });
 };
-Tapcite.prototype = new EventEmitter();
+util.inherits(Tapcite, EventEmitter);
 
 global.Tapcite = new Tapcite();
