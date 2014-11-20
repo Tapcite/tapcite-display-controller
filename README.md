@@ -1,6 +1,13 @@
 tapcite-display-controller
 ==========================
 ```
+
+<!--  Include latest version -->
+<script src="//cdn.tapcite.com/tapcite-display-controller.min.js" type="text/javascript"></script>
+
+<!--  Or include specific version -->
+<script src="//cdn.tapcite.com/tapcite-display-controller-1.0.2.min.js" type="text/javascript"></script>
+
 Tapcite.on('tapcite:play',function() {
     console.debug('play!'); //content is now visible
 });
