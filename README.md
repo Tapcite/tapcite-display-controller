@@ -30,4 +30,45 @@ Tapcite.on('tapcite:qrcode',function(data) {
     }
     */
 });
+
+/**
+ * Send text to current mobile view
+ *
+ * Can be use in mobile vies with text like this:
+ * {{name | Fallback text}}
+ */
+Tapcite.text('name','My text');
+
+/**
+ * Send data with value
+ * Data can be used in any view in mobile.
+ * Data will be sent also with form to serve (webhook, email)
+ *
+ * Can be use in mobile vies with text like this:
+ * {{data.deep2.sub.val | Fallback text}}
+ */
+Tapcite.data('deep2.sub.val','myvalue'); //send data to mobile controller
+
+/**
+ * Send data as object to mobile controller.
+ * Data can be used in any view in mobile.
+ * Data will be sent also with form to serve (webhook, email)
+ *
+ * Can be use in mobile vies with text like this:
+ * {{data.myobject.scores | Fallback text}}
+ */
+Tapcite.data('myobject',{
+    scores: 10,
+    ranking: 1
+});
+
+/**
+ * Move user to next view.
+ * Target view must be connected to current view.
+ * Target value can be id or name of target.
+ * Empty or null will go to random target
+ */
+Tapcite.go('target_id');
+Tapcite.go('Target name');
+Tapcite.go();//random
 ```
