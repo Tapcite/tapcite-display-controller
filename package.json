@@ -1,6 +1,6 @@
 {
   "name": "tapcite-display-controller",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Javascript library to communicate with Tapcite controller with custom display content.",
   "main": "",
   "scripts": {
