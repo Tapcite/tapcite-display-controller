@@ -49,6 +49,21 @@ var Tapcite = function() {
         });
     };
 
+    this.state = function(id,state) {
+        this.send('state',{
+            id: id,
+            state: state ? true : false
+        });
+    };
+
+    this.disable = function(id) {
+        this.state(id,false);
+    };
+
+    this.enable = function(id) {
+        this.state(id,true);
+    };
+
 };
 util.inherits(Tapcite, EventEmitter);
 
