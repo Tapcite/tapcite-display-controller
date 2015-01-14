@@ -6,7 +6,7 @@ tapcite-display-controller
 <script src="//cdn.tapcite.com/tapcite-display-controller.min.js" type="text/javascript"></script>
 
 <!--  Or include specific version -->
-<script src="//cdn.tapcite.com/tapcite-display-controller-1.1.0.min.js" type="text/javascript"></script>
+<script src="//cdn.tapcite.com/tapcite-display-controller-1.2.0.min.js" type="text/javascript"></script>
 
 Tapcite.on('tapcite:play',function() {
     console.debug('play!'); //content is now visible
@@ -71,4 +71,14 @@ Tapcite.data('myobject',{
 Tapcite.go('target_id');
 Tapcite.go('Target name');
 Tapcite.go();//random
+
+//**
+ * Change state of button in current view of mobile (enable/disable)
+ *
+ * You can check button id from story builder edit view
+ */
+Tapcite.state('button_id',true); //enable
+Tapcite.state('button_id',false); //disable
+Tapcite.enable('button_id'); //enable shortcut
+Tapcite.disable('button_id'); //disable shortcut
 ```
